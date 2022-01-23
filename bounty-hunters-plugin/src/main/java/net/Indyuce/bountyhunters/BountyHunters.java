@@ -15,7 +15,6 @@ import net.Indyuce.bountyhunters.command.HuntersCommand;
 import net.Indyuce.bountyhunters.command.RedeemBountyHeadsCommand;
 import net.Indyuce.bountyhunters.command.completion.AddBountyCompletion;
 import net.Indyuce.bountyhunters.command.completion.BountiesCompletion;
-import net.Indyuce.bountyhunters.compat.Metrics;
 import net.Indyuce.bountyhunters.compat.database.DataProvider;
 import net.Indyuce.bountyhunters.compat.database.MySQLProvider;
 import net.Indyuce.bountyhunters.compat.database.YAMLDataProvider;
@@ -181,7 +180,6 @@ public class BountyHunters extends JavaPlugin {
                 }
             }, this);
 
-        new Metrics(this);
 
         if (getServer().getPluginManager().getPlugin("Towny") != null && getConfig().getBoolean("claim-restrictions.town-members")) {
             bountyManager.registerClaimRestriction(new TownySupport());
